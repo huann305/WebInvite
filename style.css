@@ -1,0 +1,193 @@
+/* header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.781);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+ /* Trạng thái ban đầu, các phần tử sẽ ở ngoài khung nhìn và ẩn */
+/* Trạng thái ban đầu: bay từ trái */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Trạng thái ban đầu: bay từ phải */
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Khi vào khung nhìn, phần tử trở lại vị trí gốc */
+.fade-in-left.active, 
+.fade-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+ body{
+    text-align: center;
+ }
+.save-the-date__date{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+p, h1{
+    text-align: center;
+}
+.line-vertical{
+    width: 1px;
+    height: 50px;
+    background-color: black;
+}
+.line-horizontal{
+    width: 50px;
+    height: 1px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: black;
+}
+.save-the-date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.save-the-date img{
+    width: 257px;
+    height: 393px;
+}
+.save-the-date div {
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.introduce__content__image{
+    width: 203px;
+    height: 369px;
+}
+.introduce__content{
+    display: flex;
+}
+.introduce__content__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.introduce__content__reverse{
+    flex-direction: row-reverse;
+}
+
+.photo-gallery {
+    display: grid;
+    gap: 20px; /* Khoảng cách giữa các hình ảnh */
+    grid-template-columns: 1fr 1fr 1fr; /* Hiển thị 4 cột */
+}
+
+.photo img {
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo:nth-child(2) img {
+    height: 120%;
+    width: 120%;
+}
+
+.invitation-card {
+    background-color: #e8f0fe;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 32px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #002f6c;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4f4f4f;
+}
+
+.date {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.location {
+    font-size: 16px;
+    color: #4f4f4f;
+    margin-bottom: 5px;
+}
+
+.note {
+    font-size: 14px;
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.confirm-button, .gift-button {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-button {
+    background: linear-gradient(to right, #dcdcdc, #b0b0b0);
+    color: #333;
+}
+
+.gift-button {
+    background-color: #002f6c;
+    color: #fff;
+}
+
+.confirm-button:hover {
+    background: linear-gradient(to right, #b0b0b0, #dcdcdc);
+}
+
+.gift-button:hover {
+    background-color: #001f4b;
+}
