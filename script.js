@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Chọn tất cả các phần tử có thể xuất hiện trong khung nhìn
-    const elements = document.querySelectorAll("header, section, footer, div, img, h1, h2, h3, p, button");
+    const elements = document.querySelectorAll("*");
 
     // Thêm lớp fade-in cho các phần tử
     elements.forEach(element => {
